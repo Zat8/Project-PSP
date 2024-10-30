@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miku</title>
+    <title>Biodata Izzat</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -28,7 +28,7 @@
             height: 80px;
             width: 100%;
             background-color: #000b1d53;
-            position: relative; /* Make it stay on top */
+            position: relative; 
             z-index: 2;
         }
         .navigasi{
@@ -37,8 +37,8 @@
         .navigasi{
             width: 100%;
             display: flex;
-            justify-content: center; /* Mencentral secara horizontal */
-            align-items: center; /* Mencentral secara vertikal */
+            justify-content: center; 
+            align-items: center; 
         }
         .navigasi ul{
             list-style-type: none;
@@ -60,7 +60,6 @@
         .navigasi ul li a:hover{
             color: #717171;
         }
-
         .content{
             display: flex;
             width: 100%;
@@ -75,7 +74,7 @@
             align-items: center;
             padding: 0px 80px;
             color: #fff;
-            z-index: 2; /* Supaya teks tetap di atas gambar */
+            z-index: 2; 
         }
         .left h2{
             margin-top: -10px;
@@ -98,8 +97,10 @@
             cursor: pointer;
             margin-top: 20px;
         }
-        .left button:hover{
-            background-color: #4D3ABF;
+        .left button:hover {
+            display: block;
+            filter: drop-shadow(0 0 10px #fffdef);
+            background-color: #6246EA;
         }
         .right{
             width: 50%;
@@ -111,26 +112,48 @@
         .right img{
             object-fit: cover;
             border-radius: 50%;
+            box-shadow:0 0 30px #6246EA;
+        }
+        .right img:hover {
+            display: block;
+            filter: drop-shadow(0 0 15px #fffdef);
         }
         .project{
             width: 100%;
             margin-top: 80px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 80px;
+            color: #fff;
+            z-index: 2; 
         }
         .Project h1{
             text-align: center;
             font-size: 40px;
             font-weight: 600;
             margin-bottom: 40px;
+            text-shadow: 1rem 1rem 2rem 0 yellow;
         }
         .card{
             width: 30%;
             padding: 20px;
             margin: 20px;
             background-color: #041531;
-            border-radius: 10px;
+            border-radius: 10px; 
+        }
+        .card:hover {
+            display: block;
+            filter: drop-shadow(0 0 15px #6246EA);
+            background-color: #041531;
         }
         .pembungkus-card{
             display: flex;
+            flex-grow: 1;
+            flex-wrap: wrap;
+            flex-basis: 200;
         }
         
     </style>
@@ -149,11 +172,26 @@
     <div class="content">
         <div class="left">
             <h1 style="font-size: 40px;">Izzat Al Haq</h1>
-            <p>Saya adalah seorang Mahasiswa Universitas Jenderal Soedirman dengan jurusan Informatika Tahun 2024. Pada tahun pertama saya berkuliah saya mempelajari bagaimana membuat sebuah Algoritma, Database, bahkan pembuatan web. Selain dari berkuliah dikelas saya juga mengikuti PKM (Program Kreativitas Mahasiswa) yang mana ini merupakan hal yang berguna untuk membuat paper atau membuat skripsi nanti.</p>
+            <p>Saya adalah seorang Mahasiswa Universitas Jenderal Soedirman dengan jurusan Informatika Tahun 2024. Pada tahun pertama saya berkuliah saya mempelajari bagaimana membuat sebuah Algoritma, Database, bahkan pembuatan web. Selain dari berkuliah dikelas saya juga mengikuti PKM (Program Kreativitas Mahasiswa) yang mana ini merupakan hal yang berguna untuk membuat paper atau membuat skripsi nanti.</p><br>
+            <p>Saya ingin menjadi seorang fullctuck development yang membuat saya belajar cara menjadi back-end dan front-end yang mengharuskan saya berfikir lebih kreatif. Selain itu saya juga ingin berkecimpung dalam game-dev dan juga VR yang dimana ini merupakan tantangan besar namun menarik bagi saya.</p>
+            
             <a href="https://github.com/Zat8"><button>Github</button></a>
+            <a href="https://wa.me/qr/W4QNWOGPDFBIM1"><button>WhatsApp</button></a>
+            <a href="https://www.instagram.com/zat_alhaq02/profilecard/?igsh=MXR3a3dxMGR2cGoweg=="><button>Instagram</button></a>
         </div>
         <div class="right">
-            <img src="img/kiw.jpg" width="500px" height="500px">
+            <img id="Gambar"  onmouseover="ubahgambar()" onmouseout="balikgambar()" width="500px" height="500px" src="img/kiw.jpg">
+
+            <script>
+                function ubahgambar(){
+                    let Gambar = document.getElementById("Gambar");
+                    Gambar.src = "img/zat.jpg" 
+                }
+                function balikgambar(){
+                    let Gambar = document.getElementById("Gambar");
+                    Gambar.src = "img/kiw.jpg"
+                }
+            </script>
         </div>
     </div>
     <hr>
@@ -161,18 +199,20 @@
         <h1>Project</h1>
         <div class="pembungkus-card">
             <div class="card">
-                <h3>Project 1</h3>
-                <p style="text-align: justify;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem impedit ducimus autem cumque earum itaque vel! Optio maxime voluptatum, repellat exercitationem illo expedita dolore, nam iusto fuga eos nostrum aliquam?</p>
+                <h3>Kuliah</h3><br>
+                <p style="text-align: justify;">Selama berkuliah saya sudah membuat beberapa program menggunakan bahasa C++ dan juga Python.</p>
             </div>
             <div class="card">
-                <h3>Project 2</h3>
-                <p style="text-align: justify;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem impedit ducimus autem cumque earum itaque vel! Optio maxime voluptatum, repellat exercitationem illo expedita dolore, nam iusto fuga eos nostrum aliquam?</p>
+                <h3>PSP</h3><br>
+                <p style="text-align: justify;">Saya telah mempelajari bagaimana cara membuat website menggunakan HTML dan juga CSS sebagai tambahan.</p>
             </div>
             <div class="card">
-                <h3>Project 3</h3>
-                <p style="text-align: justify;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem impedit ducimus autem cumque earum itaque vel! Optio maxime voluptatum, repellat exercitationem illo expedita dolore, nam iusto fuga eos nostrum aliquam?</p>
+                <h3>PKM</h3><br>
+                <p style="text-align: justify;">Saya mengikuti PKM untuk melatih otak untuk menyelesaikan sebuah permasalahan yang ada di sekitar.</p>
             </div>
         </div>
     </div>
+    <hr>
+
 </body>
 </html>
